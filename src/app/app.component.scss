@@ -1,0 +1,10 @@
+.container-fruid{
+    display: flex;
+    width: 100%;
+    .content-left{
+        width: 12%;
+    }
+    .content-right{
+        width: 88%; 
+    }
+}

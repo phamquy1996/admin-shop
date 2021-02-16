@@ -1,0 +1,126 @@
+.header{
+    box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+    width: 100%;
+    height: 63px;
+    display: flex;
+    .header-left{
+        width: 50%;
+        align-items: center;
+        display: flex;
+        .form-search{
+            width: 100%;
+            margin-left: 10px;
+            input{
+                width: 361px;
+                outline: none;
+                height: 40px;
+                border: 1px solid #00000038;
+                ::placeholder{
+                    color: #00000038;
+                    font-size: 12px;
+                }
+            }
+            button{
+                background-color: #4e73df;
+                border: #4e73df;
+                border-top-right-radius: 5px;
+                border-bottom-right-radius: 5px;
+                color: white;
+                height: 40px;
+                width: 38px;
+                i{
+                    font-size: 13px;
+                    outline: none;
+                }
+            }
+        }
+    }
+    .header-right{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 60px;
+        .message{
+            color: #d1d3e2;
+            font-size: 20px;
+            position: relative;
+            .pop-qty-message{
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: red;
+                top: 0;
+                right: -5px;
+                color: white;
+                font-size: 12px;
+                text-align: center;
+                border-radius: 5px;
+            }
+        }
+        .nofication{
+            color: #d1d3e2;
+            font-size: 20px;
+            margin-left: 40px;
+            position: relative;
+            .pop-qty-nofi{
+                position: absolute;
+                width: 15px;
+                height: 15px;
+                background: red;
+                top: 0;
+                right: 40%;
+                color: white;
+                font-size: 12px;
+                text-align: center;
+                border-radius: 5px;
+            }
+            &::after{
+                content: "|";
+                padding-left: 20px;
+            }
+        }
+        .user{
+            display: flex;
+            align-content: center;
+            position: relative;
+            .name-user{
+                padding: 0px 5px 0px 10px;
+                font-size: 16px;
+                color: black;
+            }
+            .image-user{
+                padding: 0px 5px 0px 10px;
+            }
+            img{
+                width: 32px;
+                height: 32px;
+            }
+            .toggle-user{
+                position: absolute;
+                background: white;
+                padding: 10px;
+                z-index: 99;
+                top:50px;
+                width: 150px;
+                box-shadow: 0 .15rem 1.75rem 0 rgba(58,59,69,.15)!important;
+                ul{
+                    margin: 0;
+                    padding: 0;
+                    li{
+                        list-style-type: none;
+                        i{
+                            font-size: 13px;
+                            color: #d1d3e2!important;
+                        }
+                        a{
+                            color: #3a3b45;
+                            margin-left: 15px;
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

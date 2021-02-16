@@ -1,0 +1,17 @@
+<div class="container-fruid" *ngIf="auth">
+  <div class="content-left">
+    <app-navbar></app-navbar>
+  </div>
+  <div class="content-right">
+    <app-header></app-header>
+    <li *ngFor="let hero of broadcastMessage">
+      <p>{{hero.message}}</p>
+    </li>
+    <router-outlet></router-outlet>
+    <app-footer></app-footer>
+  </div>
+</div>
+
+<div class="container" *ngIf="!auth">
+  <router-outlet></router-outlet>
+</div>

@@ -1,0 +1,33 @@
+<div class="header">
+    <div class="header-left">
+        <div class="form-search">
+            <input type="text" placeholder="Search">
+            <button><i class="fas fa-search"></i></button>
+        </div>
+    </div>
+    <div class="header-right">
+        <div class="message"> 
+            <i class="fab fa-facebook-messenger"></i>
+            <div class="pop-qty-message">3</div>
+        </div>
+        <div class="nofication">
+            <i class="far fa-bell"></i>
+            <div class="pop-qty-nofi">3</div>
+        </div>
+        <div class="user">
+            <div class="name-user">
+                pham duc quy
+            </div>
+            <div class="image-user">
+                <img src="https://startbootstrap.github.io/startbootstrap-sb-admin-2/img/undraw_profile.svg" alt="">
+            </div>
+            <div class="toggle-user">
+                <ul>
+                    <li><i class="fas fa-user-alt"></i><a href="">Profile</a></li>
+                    <li><i class="fas fa-coins"></i><a href="">Setting</a></li>
+                    <li (click) = "logout()"><i class="fas fa-coins" ></i><a [routerLink]="['login']">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

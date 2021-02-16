@@ -1,0 +1,28 @@
+<div class="container-fruid" id="login">
+    <div class="login">
+        <div class="login-left">
+            <img src="https://source.unsplash.com/K4mSJ7kc0As/600x800" alt="">
+        </div>
+        <div class="login-right">
+            <div class="tilte">
+                login
+            </div>
+            <form #loginForm="ngForm"
+            (ngSubmit)="createProduct(loginForm)">
+                <div class="text-email">
+                    <input type="text" placeholder="Email" [(ngModel)]="userLogin.email" name="email">
+                </div>
+                <div class="password">
+                    <input type="password" placeholder="Password" [(ngModel)]="userLogin.password" name="password">
+                </div>
+                <div class="checkbox">
+                    <input type="checkbox"> Remember Me
+                </div>
+                <div class="btn-login">
+                    <button>Login</button>
+                </div>
+            </form>
+        </div>
+    </div>    
+</div>
+

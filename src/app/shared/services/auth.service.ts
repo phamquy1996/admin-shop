@@ -18,7 +18,10 @@ export class AuthService {
 
   public login(payload:object){
     console.log(payload)
-    this.http.post('http://localhost:8082/login',{payload}).subscribe(data=>{
+    const headers = { 'content-type': 'application/json'}   
+    const body=JSON.stringify(payload);
+    this.http.post('http://localhost:8082/api/auth/login', body,{'headers':headers}
+    ).subscribe(data=>{
       console.log(data)
     })
   }

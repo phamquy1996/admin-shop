@@ -1,0 +1,22 @@
+<div class="btn-header">
+  <button routerLink="/cate/action">Thêm danh mục</button>
+</div>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First</th>
+      <th scope="col">Last</th>
+      <th scope="col">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of cates; index as i;">
+      <th scope="row">1</th>
+      <td>{{item.name}}</td>
+      <td><img src="http://localhost:8082/upload/static/images/gallery/{{item.image}}" alt="" style="width: 80px;"></td>
+      <td *ngIf="item.status == 1">Hiện</td>
+      <td *ngIf="item.status == 0">Ẩn</td>
+    </tr>
+  </tbody>
+</table>

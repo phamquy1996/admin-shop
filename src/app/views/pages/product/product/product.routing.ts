@@ -6,8 +6,7 @@ export const ProductRoutes: Routes = [
   {
     path: "products",
     children: [
-     
-      
+
     ],
   },
 ];

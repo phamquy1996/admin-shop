@@ -125,15 +125,20 @@ export class AppComponent {
     this.authervice.auth$.subscribe(auth =>{
       this.auth = auth;
     })
-    this.http.get('http://localhost:8082/allUser').subscribe(data => {
-      console.log(data); // using the HttpClient instance, http to call the API then subscribe to the data and display to console
-    });
-    console.log('auth' + this.auth)
-    if(this.auth == 'login'){
-      this.router.navigate(['']);
-    }else{
-      this.router.navigate(['login']);
-    }
+    // this.http.get('http://localhost:8082/api/auth/allUser').subscribe(data => {
+    //   console.log(data); // using the HttpClient instance, http to call the API then subscribe to the data and display to console
+    // });
+
+    // this.http.get('http://localhost:8082/api/auth/user').subscribe(data => {
+    //   console.log('111111111111111111'  + data); // using the HttpClient instance, http to call the API then subscribe to the data and display to console
+    // });
+    // console.log('auth' + this.auth)
+    // this.router.navigate(['']);
+    // if(this.auth == 'login'){
+    //   this.router.navigate(['']);
+    // }else{
+    //   this.router.navigate(['login']);
+    // }
     
   }
 }

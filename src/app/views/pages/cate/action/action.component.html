@@ -1,0 +1,24 @@
+<div class="form-page">
+  <h4>Thêm danh mục</h4>
+  <form #cateForm="ngForm"
+  (ngSubmit)="createCate(cateForm)">
+    <div class="form-group">
+      <label for="exampleFormControlInput1">Tên danh mục</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" [(ngModel)]="cate.name" name="name">
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlSelect1">Trạng thái</label>
+      <select class="form-control" id="exampleFormControlSelect1" [(ngModel)]="cate.status" name="status">
+        <option value=1>Hiện</option>
+        <option value=0>Ẩn</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="exampleFormControlFile1">Hình ảnh cho danh mục</label>
+      <img src="http://localhost:8082/upload/static/images/gallery/{{cate.image}} " height="200"> <br/>
+      <input type="file" class="form-control-file" id="file" name="image" (change)="onFileChanged($event)" multiple>
+    </div>
+    <button class="btn btn-danger">Thêm</button>
+    <button class="btn btn-infor ml-3">Hủy</button>
+  </form>
+</div>

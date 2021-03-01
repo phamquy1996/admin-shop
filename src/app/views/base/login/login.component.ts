@@ -3,9 +3,7 @@ import { Router } from '@angular/router'
 import { AuthService } from './../../../shared/services/auth.service'
 import { UserLogin } from './../../../shared/models/user'
 import { NgForm } from "@angular/forms";
-declare var $: any;
-declare var require: any;
-declare var toastr: any;
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -26,10 +24,10 @@ export class LoginComponent implements OnInit {
     // }
   }
   onClickMe = () => {
-    console.log(this.userLogin)
-    localStorage.setItem('dataSource', 'login')
-    this.authService.auth$.next(localStorage.getItem('login'))
-    this.router.navigate(['']);
+    // console.log(this.userLogin)
+    // localStorage.setItem('dataSource', 'login')
+    // this.authService.auth$.next(localStorage.getItem('login'))
+    // this.router.navigate(['']);
     // location.reload()
   }
   createProduct = (productForm: NgForm) =>{

@@ -9,14 +9,19 @@ import { AppComponent } from './app.component';
 import { IndexComponent } from './views/pages/index/index.component';
 import { IndexModule } from './../app/views/base/index/index.module';
 import { LoginModule } from './../app/views/base/login/login.module';
+import { CateModule } from './views/pages/cate/cate.module'
+import { SubCateModule } from './views/pages/subcate/subcate.module'
 import { LoginComponent } from './views/base/login/login.component'
-import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from './shared/shared.module' 
+import { XhrInterceptor } from './http-client-interceptor';
+import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
+import { SubcateComponent } from './views/pages/subcate/subcate.component';
 @NgModule({
   declarations: [
     AppComponent,
     IndexComponent,
-    LoginComponent
+    LoginComponent,
+    SubcateComponent,
   ],
   imports: [
     BrowserModule,
@@ -26,7 +31,9 @@ import { SharedModule } from './shared/shared.module'
     LoginModule,
     HttpClientModule,
     SharedModule,
-    FormsModule
+    CateModule,
+    SubCateModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

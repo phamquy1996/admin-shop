@@ -34,7 +34,7 @@ export class SubCategoryService {
         console.log(page); // Print the parameter to the console. 
     });
     console.log('ra day trc')
-    return this.http.get('http://localhost:8082/api/v1/listSubCateokok?keyword=a&page='+ this.params)
+    return this.http.get('http://localhost:8082/api/v1/listSubCateokok'+ window.location.search)
   }
   
 }

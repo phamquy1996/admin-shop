@@ -1,5 +1,7 @@
 <div class="btn-header">
     <button routerLink="/subcate/action">Thêm danh mục</button>
+    <button [routerLink]="['/subcate/index']" [queryParams]="{keyword:'a'}" queryParamsHandling="merge">fsdf</button>
+    <button [routerLink]="['/subcate/index']" [queryParams]="{qk:'asdf'}" queryParamsHandling="merge">fsdf</button>
   </div>
   <table class="table table-striped">
     <thead>
@@ -21,14 +23,14 @@
       <nav aria-label="Page navigation example">
         <ul class="pagination">
           <li class="page-item">
-            <a class="page-link"  class="page-link" [routerLink]="'/subcate/index'" [queryParams]="{ page: listSubcates.page - 1}" aria-label="Previous" (click)="allSubcate(listSubcates.page - 1)" >
+            <a class="page-link"  class="page-link" [routerLink]="'/subcate/index'" [queryParams]="{ page: listSubcates.page - 1}" queryParamsHandling="merge" aria-label="Previous" (click)="allSubcate(listSubcates.page - 1)" >
               <span aria-hidden="true">&laquo;</span>
               <span class="sr-only">Previous</span>
             </a>
           </li>
-          <li class="page-item" *ngFor="let item of [].constructor(listSubcates.totalPage); index as i;"><a class="page-link" [routerLink]="'/subcate/index'" [queryParams]="{ page: i}" (click)="allSubcate(i)" >{{i+1}}</a></li>
+          <li class="page-item" *ngFor="let item of [].constructor(listSubcates.totalPage); index as i;"><a class="page-link" [routerLink]="'/subcate/index'" [queryParams]="{ page: i}" queryParamsHandling="merge" >{{i+1}}</a></li>
           <li class="page-item">
-            <a class="page-link" (click)="allSubcate(listSubcates.page + 1)" [routerLink]="'/subcate/index'" [queryParams]="{ page: listSubcates.page + 1}" aria-label="Next">
+            <a class="page-link" (click)="allSubcate(listSubcates.page + 1)" [routerLink]="'/subcate/index'" [queryParams]="{ page: listSubcates.page + 1}" aria-label="Next" queryParamsHandling="merge">
               <span aria-hidden="true">&raquo;</span>
               <span class="sr-only">Next</span>
             </a>

@@ -11,6 +11,7 @@ import { IndexModule } from './../app/views/base/index/index.module';
 import { LoginModule } from './../app/views/base/login/login.module';
 import { CateModule } from './views/pages/cate/cate.module'
 import { SubCateModule } from './views/pages/subcate/subcate.module'
+import { ChildCateModule } from './views/pages/childCate/childcate.module'
 import { LoginComponent } from './views/base/login/login.component'
 import { SharedModule } from './shared/shared.module' 
 import { XhrInterceptor } from './http-client-interceptor';
@@ -33,6 +34,7 @@ import { SubcateComponent } from './views/pages/subcate/subcate.component';
     SharedModule,
     CateModule,
     SubCateModule,
+    ChildCateModule,
     FormsModule,
   ],
   providers: [],

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ChildCateService } from './../../../shared/services/childcate.service'
+
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -7,12 +7,9 @@ import { ChildCateService } from './../../../shared/services/childcate.service'
 })
 export class IndexComponent implements OnInit {
 
-  constructor(private childCateService: ChildCateService) { }
-  data:any
+  constructor() { }
+
   ngOnInit(): void {
-    this.childCateService.allCateandSubcate().subscribe(data=>{
-      this.data = data
-    })
   }
 
 }

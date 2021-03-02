@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Cate } from './../../../../shared/models/cate'
+import { Cate } from '../../../../shared/models/cate'
 import { NgForm } from "@angular/forms";
 import { HttpClient } from '@angular/common/http';
 import { CateService } from './../../../../shared/services/cate.service'

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CateService } from './../../../../shared/services/cate.service'
-import { Cate } from './../../../../shared/models/cate'
+import { Cate } from '../../../../shared/models/cate'
 @Component({
   selector: 'app-index',
   templateUrl: './index.component.html',
@@ -17,6 +17,7 @@ export class IndexComponent implements OnInit {
     this.cates = this.getallCate()
 
   }
+  
   getallCate = () =>{
     console.log(this.cateService.allCate())
     this.cateService.allCate().subscribe(data=>{

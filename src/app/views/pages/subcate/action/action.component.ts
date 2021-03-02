@@ -23,12 +23,12 @@ export class ActionComponent implements OnInit {
       console.log(data)
     })
   }
-
+  
   createSubcate = (subCategoryForm: NgForm) =>{
     console.log(subCategoryForm.value)
     const payload: Subcate = {
       ...subCategoryForm.value,
-      image: "anhquy"
+      image: "anhquy" 
     }
     this.subCategoryService.addSubcate(payload)
   }

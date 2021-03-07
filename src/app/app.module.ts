@@ -17,6 +17,7 @@ import { SharedModule } from './shared/shared.module'
 import { XhrInterceptor } from './http-client-interceptor';
 import {HTTP_INTERCEPTORS, HttpClientModule} from '@angular/common/http';
 import { SubcateComponent } from './views/pages/subcate/subcate.component';
+import { ShippingModule } from './views/pages/shipping/shipping.module'
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +37,7 @@ import { SubcateComponent } from './views/pages/subcate/subcate.component';
     SubCateModule,
     ChildCateModule,
     FormsModule,
+    ShippingModule
   ],
   providers: [],
   bootstrap: [AppComponent],

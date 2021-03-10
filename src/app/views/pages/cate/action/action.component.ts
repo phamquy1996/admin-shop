@@ -26,9 +26,10 @@ export class ActionComponent implements OnInit {
     
     console.log(formData)
 
-    this.http.post('http://localhost:8082/upload/', formData, {responseType: 'text'}
+    this.http.post<Array<Cate>>('http://localhost:8082/upload/', formData,
     ).subscribe(
-      (res) => this.cate.image = res,
+      (res) => this.cate.image = res[0].image,
+      // (res) => this.cate.image = res[0].image,
       (err) => console.log(err)
     );
 

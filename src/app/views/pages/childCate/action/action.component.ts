@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Childcate } from './../../../../shared/models/childcate'
+import { Childcate } from './../../../../shared/models/Childcate'
 import { NgForm } from '@angular/forms'
 import { ChildCateService } from './../../../../shared/services/childcate.service'
 @Component({
@@ -29,7 +29,8 @@ export class ActionComponent implements OnInit {
   }
 
   onCateChange=(data:any)=>{
-    this.listSubcate = this.data.listSubcate.filter((item:any )=> item.categoryentity.id == data.target.value)
     console.log(data.target.value)
+    this.listSubcate = this.data.listSubcate.filter((item:any )=> item.author_id == data.target.value)
+    console.log(this.data.listSubcate)
   }
 }
